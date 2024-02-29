@@ -11,7 +11,7 @@ for i in range(n):
 
 while len(arr) != 0:
     if level > n+1:
-        print('No')
+        print('NO')
         break
     elif len(stack) == 0:
         stack.append(level)
