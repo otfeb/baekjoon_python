@@ -1,17 +1,13 @@
-a = int(input())
-b = int(input())
-n = int(input())
+a,b,n = map(int, input().split())
 
-num = a/b
+# 25 % 7 = 4
+# 4 * 10 = 40
+# 40 // 7 = 5 -> 소수점 첫째 자리
+# 이런식으로 원하는 소수점 자리까지 반복
 
-if a%b != 0:
-    num2 = round(num,n+1)
-    result = list(str(num2))
-    ans = result[len(result)-2]
-    if ans == '.':
-        print(0)
-    else:
-        print(ans)
-else:
-    print(0)
+for i in range(n):
+    a = (a%b) * 10
+    result = a//b
+
+print(result)
 
